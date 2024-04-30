@@ -1,0 +1,166 @@
+/* -- font -- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* -- navbar -- */
+
+nav {
+  background-color: #F55A5A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 0;
+  color: #FFFFFF;
+}
+
+.nav--icon {
+  height: 25px;
+}
+
+.nav--title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -0.075rem;
+}
+
+/* -- card -- */
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 3em;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 2em 0;
+}
+
+.card--img {
+  height: 100%;
+  width: 20rem;
+  object-fit: cover;
+  border-radius: 0.3em;
+
+  transform: scale(1);
+  transition: all 650ms ease-in-out;
+}
+
+.card--img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+.card--stats {
+  margin-left: 1em;
+  padding: 0.5em;
+}
+
+.card--pin {
+  height: 0.8rem;
+}
+
+.card--location {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  margin: 0 1em 0 0.25em;
+  color: #2B283A;
+  font-weight: 400;
+}
+
+.card--location-url {
+  color: #918E9B;
+  font-size: 0.9rem;
+  letter-spacing: 0.25px;
+}
+
+.card--title {
+  font-size: 2rem;
+  margin: 0.25em 0;
+  font-weight: 700;
+}
+
+.card--date {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.25px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.card--desc {
+  max-width: 50rem;
+  margin-top: 0.8125em;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 150%;
+}
+
+/** -- dividers --**/
+
+.cards-list > .card + .card {
+  padding: 2em 0;
+  border-top: 1px solid rgb(235, 235, 235);
+}
+
+.cards-list .card:first-child {
+  padding-top: 0;
+}
+
+.cards-list .card:last-child {
+  padding-bottom: 0;
+}
+
+/** -- footer -- **/
+
+.footer {
+  padding: 1em 2em;
+  justify-content: center;
+  text-align: center;
+  background-color: #F55A5A;
+  color: #2B283A;
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+.footer--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer--link:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+/** -- media queries -- **/
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  .card--img {
+    width: 100%;
+  }
+  .card--stats {
+    margin: 1em 0 0 0;
+    padding: 0;
+  }
+}
